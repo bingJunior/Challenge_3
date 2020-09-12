@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/bgIV"
+        android:layout_width="417dp"
+        android:layout_height="845dp"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/bg" />
+
+    <ImageView
+        android:id="@+id/greyIV"
+        android:layout_width="358dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="248dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/bgIV"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/bgIV"
+        app:layout_constraintTop_toTopOf="@+id/bgIV"
+        app:srcCompat="@drawable/group_12" />
+
+    <Button
+        android:id="@+id/laterBtn"
+        android:layout_width="125dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="196dp"
+        android:background="@drawable/btn"
+        android:text="Do it later"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/greyIV"
+        app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toEndOf="@+id/failedBtn" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="40dp" />
+
+    <Button
+        android:id="@+id/failedBtn"
+        android:layout_width="125dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="196dp"
+        android:background="@drawable/btn"
+        android:text="Download"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/greyIV"
+        app:layout_constraintStart_toStartOf="@+id/startGuideline" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
